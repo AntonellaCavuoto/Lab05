@@ -57,6 +57,10 @@ class Controller:
             if matr == matricola:
                 self._view._txt_nome.value = studente.nome
                 self._view._txt_cognome.value = studente.cognome
+                self._view.update_page()
+                return
+
+        self._view.create_alert("Studente non trovato!")
 
         self._view.update_page()
 
